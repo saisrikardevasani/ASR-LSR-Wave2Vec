@@ -1,176 +1,98 @@
-***🎙️ Automatic Speech Recognition on Low Resource Languages using Self Supervised Languages.***
-📌 Overview
+# 🎙️ Low-Resource Automatic Speech Recognition using Self-Supervised Learning
 
-This project focuses on building an Automatic Speech Recognition (ASR) system for low-resource Indian languages using state-of-the-art self-supervised speech models.
+## 📌 Overview
 
-Low-resource languages suffer from limited labeled data, making traditional ASR approaches ineffective. To address this, this project leverages pretrained transformer-based speech models and fine-tunes them on limited labeled speech datasets.
+This project focuses on building an **Automatic Speech Recognition (ASR)** system for low-resource Indian languages using state-of-the-art self-supervised speech models.
 
-🚀 Key Highlights
+Low-resource languages often lack sufficient annotated speech data, making traditional ASR approaches ineffective. This project leverages pretrained transformer-based speech models and fine-tunes them on limited labeled datasets to improve transcription performance.
 
-Fine-tuned Wav2Vec 2.0
+---
 
-Experimented with WavLM
+## 🚀 Key Features
 
-Trained on Microsoft Indian Language Speech Corpus
+- Fine-tuned Wav2Vec 2.0
+- Experimented with WavLM
+- Trained on Microsoft Indian Language Speech Corpus
+- Focused on Telugu and other low-resource Indian languages
+- Conducted dataset scaling experiments
+- Analyzed training instability during mid-training steps
+- Evaluated performance using Word Error Rate (WER)
 
-Focused on Telugu and other low-resource Indian languages
+---
 
-Conducted dataset scaling experiments (small → medium → large subsets)
-
-Analyzed training instability at intermediate steps (2000–2400 steps)
-
-Evaluated performance using Word Error Rate (WER)
-
-🧠 Problem Statement
+## 🧠 Problem Statement
 
 Building robust ASR systems for low-resource languages is challenging due to:
 
-Limited annotated speech data
+- Limited annotated speech data
+- Pronunciation and dialect variability
+- Data imbalance
+- Overfitting on small datasets
 
-Pronunciation variability
+This project investigates how self-supervised pretrained models can improve ASR performance under such constraints.
 
-Dialectal diversity
+---
 
-Data imbalance
+## 🏗️ Architecture
 
-Overfitting on small datasets
+### 1️⃣ Pretrained Backbone
+- Wav2Vec 2.0 / WavLM (Transformer-based encoders)
 
-This project investigates how self-supervised pretrained models can improve performance in such scenarios.
+### 2️⃣ Fine-Tuning Strategy
+- CTC (Connectionist Temporal Classification) Loss
+- HuggingFace Transformers framework
+- Gradient accumulation for memory efficiency
 
-🏗️ Architecture
+### 3️⃣ Training Configuration
+- Variable dataset sizes
+- Learning rate scheduling
+- Mixed precision training
+- Early stopping experiments
 
-Pretrained Backbone
+---
 
-Wav2Vec 2.0 / WavLM (Transformer-based encoder)
+## 📊 Experiments
 
-Fine-tuning Strategy
+### Dataset Scaling Study
 
-CTC (Connectionist Temporal Classification) Loss
+| Dataset Size | Observation |
+|--------------|------------|
+| Small subset | Faster convergence but high overfitting |
+| Medium subset | Improved generalization |
+| Larger subset | Lower WER but increased training time |
 
-HuggingFace Transformers pipeline
+### Training Instability Analysis
 
-Gradient accumulation for low GPU memory
+Observed behavior around 2000–2400 steps:
+- Temporary increase in validation loss
+- Possible causes:
+  - Learning rate adjustments
+  - Overfitting
+  - Gradient instability
+  - Data distribution shifts
 
-Training Setup
+This analysis helped refine training strategy and hyperparameter tuning.
 
-Variable dataset sizes
+---
 
-Mixed precision training
+## 📈 Evaluation Metrics
 
-Learning rate scheduling
+- Word Error Rate (WER)
+- Validation Loss Tracking
+- Qualitative Transcription Review
 
-Early stopping experiments
+---
 
-📊 Experiments
-Dataset Scaling Experiments
-Dataset Size	Observation
-Small subset	Faster convergence but high overfitting
-Medium subset	Improved generalization
-Larger subset	Better WER but longer training time
-Training Behavior Analysis
+## 🛠️ Tech Stack
 
-Observed:
+- Python
+- PyTorch
+- HuggingFace Transformers
+- Torchaudio
+- NumPy
+- Pandas
+- CUDA-enabled GPU
 
-Loss decreased steadily
+---
 
-At ~2000–2400 steps: temporary increase in validation loss
-
-Possible causes:
-
-Learning rate schedule spike
-
-Overfitting
-
-Gradient instability
-
-Data distribution shift
-
-This analysis helped optimize training configuration.
-
-📈 Evaluation Metric
-
-Word Error Rate (WER)
-
-Validation loss tracking
-
-Qualitative transcription analysis
-
-🛠️ Tech Stack
-
-Python
-
-PyTorch
-
-HuggingFace Transformers
-
-Torchaudio
-
-NumPy
-
-Pandas
-
-CUDA-enabled GPU training
-
-📂 Project Structure
-├── data/
-├── preprocessing/
-├── training/
-├── evaluation/
-├── notebooks/
-├── results/
-└── README.md
-🔍 Key Learnings
-
-Self-supervised models significantly reduce labeled data dependency.
-
-Low-resource ASR is highly sensitive to hyperparameters.
-
-Dataset scaling directly impacts WER performance.
-
-Training instability can be mitigated using:
-
-Proper LR scheduling
-
-Regularization
-
-Gradient clipping
-
-🎯 Future Improvements
-
-Data augmentation (SpecAugment)
-
-Language Model integration
-
-Multi-lingual fine-tuning
-
-Adapter-based fine-tuning
-
-Cross-lingual transfer learning
-
-📌 Research & Domain
-
-Domain:
-
-Automatic Speech Recognition (ASR)
-
-Self-Supervised Learning
-
-Low-Resource NLP
-
-Speech Processing
-
-Transformer-based Audio Modeling
-
-🤝 Contributions
-
-Open to collaborations in:
-
-Low-resource speech systems
-
-Multilingual ASR
-
-Speech foundation models
-
-📜 License
-
-MIT License
+## 📂 Project Structure
