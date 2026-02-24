@@ -96,3 +96,51 @@ This analysis helped refine training strategy and hyperparameter tuning.
 ---
 
 ## 📂 Project Structure
+
+├── data/
+├── preprocessing/
+├── training/
+├── evaluation/
+├── notebooks/
+├── results/
+└── README.md
+
+
+
+---
+
+## 🔍 Key Learnings
+
+- Self-supervised learning significantly reduces dependency on large labeled datasets.
+- Low-resource ASR systems are highly sensitive to hyperparameters.
+- Dataset scaling directly impacts Word Error Rate performance.
+- Training instability can be mitigated using:
+  - Proper learning rate scheduling
+  - Regularization
+  - Gradient clipping
+
+---
+
+## 🎯 Future Work
+
+- SpecAugment-based data augmentation
+- Language model integration
+- Multilingual fine-tuning
+- Adapter-based fine-tuning
+- Cross-lingual transfer learning
+
+---
+
+## 📌 Domain
+
+- Automatic Speech Recognition (ASR)
+- Self-Supervised Learning
+- Low-Resource NLP
+- Speech Processing
+- Transformer-based Audio Modeling
+
+---
+
+## 📜 License
+
+MIT License
