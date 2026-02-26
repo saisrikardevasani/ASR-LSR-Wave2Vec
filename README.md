@@ -16,7 +16,7 @@ This research project explores effective ASR techniques for low-resource Indian 
 - **SpecAugment**: Forcing contextual understanding over pattern memorization
 - **Dataset scaling experiments**: Testing performance across different data sizes (1h, 5h, 10h+)
 
-**Current Focus**: Telugu language on 5-hour subset from Microsoft Speech Corpus
+**Current Focus**: Telugu language subset from Microsoft Speech Corpus
 
 ## 🔬 Methodology
 
@@ -61,7 +61,7 @@ The project leverages pre-trained transformer-based speech models:
               │
               ▼
 ┌─────────────────────────────────────┐
-│   5-hour Telugu Corpus              │
+│          Telugu Corpus              │
 │   + SpecAugment (masking)           │
 └─────────────────────────────────────┘
 ```
@@ -187,7 +187,7 @@ evaluate (HuggingFace)
 jiwer (WER/CER calculation)
 
 # Environment
-Kaggle (free P100 GPU)
+Kaggle
 Python 3.8+
 ```
 
