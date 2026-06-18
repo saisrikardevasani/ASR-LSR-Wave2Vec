@@ -1,0 +1,23 @@
+{
+  "run_tag": "wav2vec2-xlsr_mscil_1.00",
+  "model_key": "wav2vec2-xlsr",
+  "model_id": "facebook/wav2vec2-xls-r-300m",
+  "arch": "ctc",
+  "dataset_source": "mscil",
+  "data_fraction": 1.0,
+  "n_train_samples": 31883,
+  "approx_hours": 34.2,
+  "greedy_wer_val": 0.4628,
+  "greedy_cer_val": 0.1007,
+  "beam_wer_val": null,
+  "beam_cer_val": null,
+  "kenlm_wer_val": 0.2844,
+  "greedy_wer_fleurs": null,
+  "kenlm_wer_fleurs": null,
+  "beam_wer_fleurs": null,
+  "lr": 1e-4,
+  "effective_batch": 32,
+  "epochs_trained": null,
+  "timestamp": "2026-01-29T00:00:00",
+  "_note": "Pre-populated from NB05b (EXP-1 MSCIL-only). Val WER only — FLEURS not evaluated in that run."
+}

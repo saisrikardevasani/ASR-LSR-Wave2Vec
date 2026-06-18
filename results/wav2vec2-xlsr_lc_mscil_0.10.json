@@ -1,0 +1,21 @@
+{
+  "run_tag": "wav2vec2-xlsr_mscil_0.10",
+  "model_key": "wav2vec2-xlsr",
+  "model_id": "facebook/wav2vec2-xls-r-300m",
+  "arch": "ctc",
+  "dataset_source": "mscil",
+  "data_fraction": 0.1,
+  "n_train_samples": 3187,
+  "approx_hours": 3.4,
+  "greedy_wer_val": 0.598,
+  "greedy_cer_val": null,
+  "kenlm_wer_val": null,
+  "greedy_wer_fleurs": 0.5876,
+  "kenlm_wer_fleurs": null,
+  "beam_wer_val": null,
+  "beam_wer_fleurs": null,
+  "lr": 0.0001,
+  "effective_batch": 32,
+  "epochs_trained": null,
+  "timestamp": "2026-05-23T00:00:00"
+}
