@@ -60,3 +60,10 @@ training.log
 # Dataset caches (large)
 *_cache/
 arrow_cache/
+
+# Personal / confidential documents
+Practicum-Proposal-Form-updated.pdf
+AGENT_BUILD_PROMPT.md
+
+# Notebook duplicates (space-named copies)
+* (1).ipynb
